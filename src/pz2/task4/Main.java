@@ -5,6 +5,6 @@ public class Main {
         Ivanov.numberCourse = 2;
         Ivanov.nameStudent = "Ivan";
         Ivanov.show();
-        System.out.println("Средний балл: " +Ivanov.count(5, 8, 3));
+        System.out.println("Средний балл: " + Ivanov.count(5, 8, 3));
     }
 }

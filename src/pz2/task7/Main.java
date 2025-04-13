@@ -2,10 +2,12 @@ package pz2.task7;
 
 public class Main {
     public static void main(String[] args) {
-        Overload test = new Overload();
+        Overload Square = new Overload();
+        Overload Circle = new Overload();
+        Overload Rectangle = new Overload();
 
-        test.count(1);
-        test.count(1.0);
-        test.count(1.0, 1.0);
+        Square.count(1);
+        Circle.count(1.0);
+        Rectangle.count(1.0, 1.0);
     }
 }
