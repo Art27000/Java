@@ -10,6 +10,18 @@ public class Car {
     public Driver dr;
     public Engine eng;
 
+    public Car(String carMake, String autoClass, double weight, int enginePower){
+        this.carMake = carMake;
+        this.autoClass = autoClass;
+        this.weight = weight;
+        this.eng = new Engine(enginePower, carMake);
+    }
+
+
+    public void setDr(Car car, Driver dr){
+        car.dr = dr;
+    }
+
     public void start(){
         System.out.println("Поехали!");
     }
@@ -23,14 +35,16 @@ public class Car {
         System.out.println("Поворот налево");
     }
 
-    public void ToString(){
-        System.out.println(
+    public String toString(){
+        return
                 "Car info:\n" +
                 "CAR MAKE: " + carMake + "\n" +
                 "AUTO CLASS: " + autoClass + "\n" +
                 "WEIGHT: " + weight + "\n" +
-                "DRIVER: " + dr + "\n" +
-                "MOTOR: " + eng + "\n"
-        );
+                        "--------------------\n" +
+                "DRIVER: " + dr.getFirstName() + "\n\t\t" + dr.getLastName() + "\n\t\t" + dr.getPatronymicName() + "\n\t\t" + dr.getDrivingExp() + "\n" +
+                        "\n--------------------\n" +
+                "MOTOR POWER: " + eng.getPower() + "\n" +
+                "MOTOR MANUFACTURER: " + eng.getManufacturer() + "\n";
     }
 }

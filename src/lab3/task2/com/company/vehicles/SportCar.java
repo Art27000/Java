@@ -1,5 +1,12 @@
 package lab3.task2.com.company.vehicles;
 
-public class SportCar {
-    public final int maxSpeed = 290;
+import lab3.task2.com.company.details.Engine;
+import lab3.task2.com.company.professions.Driver;
+
+public class SportCar extends Car {
+    public final int MAX_SPEED = 290;
+
+    public SportCar(String carMake, String autoClass, double weight, int enginePower){
+        super(carMake, autoClass, weight, enginePower);
+    }
 }
